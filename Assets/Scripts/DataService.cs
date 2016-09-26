@@ -124,6 +124,12 @@ public class DataService  {
 
 	}
 
+    private bool InventoryToFromExists (int pFromID, int pToID)
+    {
+        var y = _connection.Table<InventoryDTO>().Where(
+            x => x.)
+    }
+
 
 
 
@@ -167,10 +173,12 @@ public class DataService  {
 	}// SetSceneToFrom
 
 
+
+
     private void AddItemToInventory(Item pItem)
     {
         CreateIfNotExists<InventoryDTO>();
-        InventoryDTO aDTO = new InventoryDTO
+        InventoryDTO aDTO = new InventoryDTO()
         {
             Name = pItem.iName,
             Date = pItem.Date,
